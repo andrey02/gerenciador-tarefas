@@ -11,6 +11,8 @@ Esta é uma API para o gerenciamento de tarefas (To-Do List) desenvolvida usando
 - IDE de sua preferência (IntelliJ, Eclipse, etc.)
 
 ### Configuração do Banco de Dados
+
+```sql
 -- Crie o banco de dados, se não existir
 IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'GerenciadorDB')
 BEGIN
@@ -34,6 +36,7 @@ BEGIN
     );
 END
 GO
+```
 
 ### Configuração do Projeto
  --Clone o repositório:
