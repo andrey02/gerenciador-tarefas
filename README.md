@@ -39,13 +39,14 @@ GO
 ```
 
 ### Configuração do Projeto
- --Clone o repositório:
+ - Clone o repositório:
 
 git clone https://github.com/andrey02/gerenciador-tarefas.git
+
 cd gerenciador-tarefas
 
 
-Navegue para a branch develop:
+ - Navegue para a branch develop:
 
 git checkout develop
 
@@ -53,23 +54,28 @@ git checkout develop
 ### Build e execute o projeto:
 
 mvn clean install
+
 mvn spring-boot:run
 
 ### Uso
 
-Endpoints
+- Endpoints
 GET /tasks: Lista todas as tarefas.
 
 POST /tasks: Cria uma nova tarefa.
 
 Exemplo de requisição:
+
+```
 {
     "title": "Minha tarefa",
     "description": "Descrição da tarefa",
     "creationDate": "2024-05-16T14:49:50",
     "status": "pendente"
 }
+```
 Exemplo de resposta:
+```
 {
     "id": 1,
     "title": "Minha tarefa",
@@ -77,18 +83,24 @@ Exemplo de resposta:
     "creationDate": "2024-05-16T14:49:50",
     "status": "pendente"
 }
+```
+
 PUT /tasks/{id}: Atualiza uma tarefa existente.
 
 Exemplo de requisição:
+```
 {
     "title": "Minha tarefa atualizada",
     "description": "Descrição atualizada",
     "creationDate": "2024-05-16T14:49:50",
     "status": "concluída"
 }
+```
 DELETE /tasks/{id}: Deleta uma tarefa existente.
 
 Exemplo de resposta:
+```
 {
     "message": "Task deletada com sucesso"
 }
+```
