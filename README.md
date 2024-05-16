@@ -59,6 +59,16 @@ mvn spring-boot:run
 
 ### Uso
 
+
+- Configure o arquivo application-dev.properties:
+```
+spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=GerenciadorDB;encrypt=false;trustServerCertificate=true
+spring.datasource.username=seu_usuario
+spring.datasource.password=sua_senha
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.SQLServerDialect
+```
+
 - Endpoints
 GET /tasks: Lista todas as tarefas.
 
